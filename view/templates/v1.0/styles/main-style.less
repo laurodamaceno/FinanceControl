@@ -1,0 +1,660 @@
+//Variables
+@mainColor: #380518;
+@mainColorTwo: #ffffff;
+@mainColorThree: rgba(0,0,0,0.95);
+@mainColorFour: #999999;
+@mainColorFive: rgba(255,255,255,0.95);
+@mainColorSix: #000000;
+@mainColorSeven: #81d195;
+@fontFaceTitles: ;
+@fontFaceParagraphs: ;
+@fontFaceMain: 'Futura Bk BT';
+@widthForSmartphone: 576px;
+//@widthForSmartphone: 960px;
+@widthForTablet: 991.98px;
+//@widthForTablet: 960px;
+
+@font-face {
+  font-family: 'Futura Bk BT';
+  src: url('fonts/Futura Bk BT.ttf');
+}
+@font-face {
+  font-family: 'Futura Bk BT Bold';
+  src: url('fonts/Futura Bk BT Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Futura Bk BT Italic';
+  src: url('fonts/Futura Bk BT Italic.ttf');
+}
+
+@font-face {
+  font-family: 'Futura Bk BT Bold-Italic';
+  src: url('fonts/Futura Bk BT Bold-Italic.ttf');
+}
+
+@font-face {
+  font-family: 'Futura Bk BT Bolder';
+  src: url('fonts/Futura Bk BT Bolder.ttf');
+}
+
+@font-face {
+  font-family: 'Futura Bk BT Bolder-Italic';
+  src: url('fonts/Futura Bk BT Bolder-Italic.ttf');
+}
+
+html, body {
+	margin: 0px;
+	padding: 0px;
+	font-family: @fontFaceMain;
+	background-color: @mainColorTwo !important;
+
+	h2 {
+		font-size: 20px;
+		font-weight: bolder;
+	}
+}
+
+.ui-page, .ui-page-theme-a, .ui-page-active, .ui-mobile-viewport, .ui-mobile {
+	background-color: @mainColorTwo !important;
+}
+
+.ui-loader, .ui-corner-all, .ui-body-a, .ui-loader-default {
+	background-color: @mainColor !important;
+	display: none !important;
+}
+
+#loading { 
+	display: block;
+	width: 50px;
+}
+.content { 
+	margin: 0; 
+}
+#all {
+	width: 100%; 
+	overflow: hidden;
+}
+#table-loading {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	background-color: @mainColor !important;
+}
+
+@media (max-width: @widthForSmartphone) {
+	.modal-backdrop {
+		z-index: 995;
+	}
+}
+
+@media (max-width: @widthForTablet) {
+	.modal-backdrop {
+		z-index: 995;
+	}
+}
+
+
+#cover-block {
+	display: none;
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	background-image: url("../images/backgounds/black-bg.png");
+	background-repeat: repeat-x repeat-y;
+	-webkit-filter: blur(15px);
+  	-moz-filter: blur(15px);
+  	-o-filter: blur(15px);
+  	-ms-filter: blur(15px);
+  	filter: blur(15px);
+}
+
+#menu-left {
+	position: fixed;
+	display: none;
+	background-color: @mainColorThree;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 999;
+	color: @mainColorTwo;
+	width: 0%;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	transition: 0.5s;
+
+	ul {
+		list-style-type: none;
+		font-size: 18px;
+		padding: 0px;
+		margin: 0px;
+		padding-top: 20px;
+
+		li:hover {
+			cursor: pointer;
+			text-decoration: underline;
+		}
+	}
+}
+
+#empty-space-menu {
+	display: none;
+	position: fixed;
+	z-index: 998;
+	width: 0;
+	height: 100%;
+	top: 0;
+	right: 0;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+#login {
+	display: none;
+	background-color: @mainColor;
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+
+	@media (max-width: @widthForSmartphone) {
+		margin-top: -60px;
+	}
+
+	@media (max-width: @widthForTablet) {
+		margin-top: -54px;
+	}
+
+	table {
+		width: 100%;
+		height: 100%;
+
+		#form-login-space {
+			width: 30%;
+			background-color: @mainColorTwo;
+			border-radius: 5px;
+			padding: 10px;
+
+			@media (max-width: @widthForSmartphone) {
+				width: 95%;
+			}
+
+			h1 {
+				color: @mainColor;
+				font-size: 25px;
+				font-weight: bolder;
+			}
+
+			#i-forgot-my-password {
+				color: @mainColor;
+				cursor: pointer;
+			}
+			#i-forgot-my-password:hover {
+				color: @mainColor;
+				text-decoration: underline;
+				cursor: pointer;
+			}
+
+			button, button:hover {
+				width: 100%;
+				background-color: @mainColor;
+				border: @mainColor;
+				color: @mainColorTwo;
+			}
+		}
+	}
+}
+
+/*
+#management-menu {
+	display: none;
+	background-color: @mainColorThree;
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: 1s;
+
+	#close-panel {
+		position: fixed;
+		z-index: 999;
+		margin: 20px;
+		float: right;
+		right: 20px !important;
+		cursor: pointer;
+		width: 40px;
+	}
+
+	#edit-salary {
+		display: none;
+	}
+
+	#space-sync {
+		display: none;
+	}
+
+	#create-id {
+		display: none;
+
+		#i-already-have-my-id {
+			color: @mainColor;
+			cursor: pointer;
+		}
+		#i-already-have-my-id:hover {
+			text-decoration: underline;
+		}
+	}
+
+	#recover-pass {
+		display: none;
+
+		#i-wish-register-me, #i-already-have-my-id{
+			color: @mainColor;
+			cursor: pointer;
+		}
+		#i-wish-register-me:hover, #i-already-have-my-id:hover {
+			text-decoration: underline;
+		}
+	}
+
+	#login-id {
+		display: block;
+
+		#i-wish-register-me, #i-wish-recover-pass{
+			color: @mainColor;
+			cursor: pointer;
+		}
+		#i-wish-register-me:hover, #i-wish-recover-pass:hover {
+			text-decoration: underline;
+		}
+	}
+
+	#option-menu, #management-salary-income, #management-benefits, #new-cash-entrance, #edit-debt-for-pay, #new-debt-for-pay, #search-debt, #management-protection, #create-password, #edit-password, #tips, #tutorials, #releases, #privacy, #about-this-apk, #edit-cash-entrance, #sync {
+		border-radius: 10px;
+		background-color: @mainColorTwo;
+		width: 55%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 7%;
+		padding: 30px;
+		transition: 0.5s;
+
+		@media (max-width: @widthForSmartphone) {
+			margin-top: 18%;
+			width: 97%;
+			padding: 5px;
+		}
+
+		.row {
+			margin-bottom: 30px;
+			margin-top: 30px;
+		}
+
+		.col-6 {
+			cursor: pointer;
+			color: @mainColor;
+			font-weight: bold;
+			font-size: 15px;
+			line-height: 15px;
+		}
+
+		img {
+			height: 100px;
+
+			@media (max-width: @widthForTablet) {
+				//height: 45px;
+			}
+		}
+	}
+
+	#management-salary-income,#management-benefits, #new-cash-entrance, #edit-debt-for-pay, #new-debt-for-pay, #search-debt, #management-protection, #create-password, #edit-password, #tips, #tutorials, #releases, #privacy, #about-this-apk, #edit-cash-entrance, #sync {
+		display: none;
+		color: @mainColorSix;
+
+		#return-to-menu {
+			height: 25px;
+			margin: 0px;
+			padding: 0px;
+			cursor: pointer;
+		}
+
+		h1 {
+			text-align: center;
+			font-size: 30px;
+			line-height: 30px;
+			padding: 0px;
+			margin: 0px;
+			font-weight: bold;
+		}
+
+		#bt-edit-protection-management {
+			color: @mainColorTwo;
+			display: none;
+		}
+
+		#fields {
+			font-size: 25;
+
+			button, button:hover {
+				width: 100%;
+				background-color: @mainColor;
+				border: @mainColor;
+				color: @mainColorTwo;
+			}
+		}
+
+		#edit-benefit {
+			display: none;
+		}
+	}
+}
+
+*/
+.modal {
+	color: @mainColorSix;
+
+	button, button:hover {
+		background-color: @mainColor;
+		background-color: @mainColor;
+		border: @mainColor;
+		color: @mainColorTwo;
+	}
+
+	#edit-benefit, #edit-salary, #bt-edit-protection-management {
+		display: none;
+	}
+}
+
+#main-header {
+	background-color: @mainColor;
+	height: 90px;
+	color: @mainColorTwo;
+
+	@media (max-width: @widthForSmartphone) {
+		height: 60px;
+		margin-top: -60px;
+		position: fixed;
+		width: 100%;
+		z-index: 997;
+	}
+
+	@media (max-width: @widthForTablet) {
+		height: 54px;
+		margin-top: -54px;
+		position: fixed;
+		width: 100%;
+		z-index: 997;
+	}
+
+	#button-main-menu {
+		height: 35px;
+		margin-top: 27.5px;
+		margin-bottom: 25.5px;
+		cursor: pointer;
+
+		@media (max-width: @widthForSmartphone) {
+			height: 30px;
+			width: 40px;
+			margin-top: 15px;
+			margin-bottom: 15px;
+		}
+
+		@media (max-width: @widthForTablet) {
+			height: 30px;
+			width: 30px;
+			margin-top: 12px;
+			margin-bottom: 12px;
+		}
+
+	}
+
+	#balance-space {
+		text-align: right;
+
+		@media (max-width: @widthForSmartphone) {
+			display: none;
+		}
+
+		@media (max-width: @widthForTablet) {
+			display: none;
+		}
+
+		span {
+			font-weight: bolder;
+			font-size: xx-large;
+		}
+	}
+
+	#title-space {
+		@media (max-width: @widthForSmartphone) {
+			
+		}
+		#logo {
+			//float: left;
+			margin-right: 20px;
+			margin-top: -15px;
+
+			@media (max-width: @widthForSmartphone) {
+				margin-right: 5px;
+				margin-top: 0px;
+			}
+			@media (max-width: @widthForTablet) {
+				margin-right: 5px;
+				margin-top: 0px;
+			}
+		}
+
+		span {
+			font-weight: bolder;
+			font-size: 40px;
+			line-height: 90px;
+			padding-top: 25px;
+			padding-bottom: 25px;
+
+			@media (max-width: @widthForSmartphone) {
+				font-size: 22px;
+				line-height: 60px;
+				padding-top: 19px;
+				padding-bottom: 19px;
+			}
+
+			@media (max-width: @widthForTablet) {
+				line-height: 54px;
+				font-size: 25px;
+			}
+		}
+	}
+
+	img {
+		height: 70px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+
+		@media (max-width: @widthForSmartphone) {
+			height: 30px;
+		}
+
+		@media (max-width: @widthForTablet) {
+			height: 35px;
+		}
+	}
+
+	#button-add-menu {
+		cursor: pointer;
+	}
+
+	#protect {
+		cursor: pointer;
+
+		@media (max-width: @widthForTablet) {
+			margin-right: -40px;
+		}
+	}
+
+}
+
+#tips-slides {
+	background-color: @mainColorFour;
+	height: 150px;
+	z-index: 996;
+
+	@media (max-width: @widthForSmartphone) {
+		margin-top: 60px;
+	}
+
+	@media (max-width: @widthForTablet) {
+		margin-top: 54px;
+	}
+
+	#slides {
+		height: 150px;
+		z-index: 995;
+
+		table {
+			width: 100%;
+			height: 150px;
+
+			p {
+				font-weight: bold;
+				font-size: 60px;
+				line-height: 55px;
+			}
+		}
+	}
+}
+
+#info-content {
+	background-color: @mainColorTwo;
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+	@media (max-width: @widthForSmartphone) {
+		text-align: center;
+		padding-bottom: 120px;
+	}
+
+	@media (max-width: @widthForTablet) {
+		text-align: center;
+		padding-bottom: 100px;
+	}
+
+	button {
+		background-color: @mainColor;
+		border: @mainColor solid 1px;
+		color: @mainColorTwo;
+		outline: none;
+		outline-color: none;
+	}
+
+	#my-debts {
+		background-color: @mainColorTwo;
+		border: @mainColor solid 1px;
+		color: @mainColor;
+		border-top-left-radius: 5px;
+	}
+
+	#entrances {
+		display: none;
+	}
+
+	#table-debts {
+
+		table {
+			width: 100%;
+			overflow-x: auto;
+
+			@media (max-width: @widthForTablet) {
+				text-align: left;
+			}
+
+			th, td {
+				width: auto;
+			}
+
+		}
+
+		.paid {
+			background-color: @mainColorSeven;
+		}
+
+		img {
+			height: 19px;
+			margin-right: 7px;
+			cursor: pointer;
+		}
+
+	}
+
+	#table-entrances {
+
+		table {
+			width: 100%;
+			overflow-x: auto;
+
+			@media (max-width: @widthForTablet) {
+				text-align: left;
+			}
+
+			th, td {
+				width: auto;
+			}
+
+		}
+
+		img {
+			height: 19px;
+			margin-right: 7px;
+			cursor: pointer;
+		}
+
+	}
+}
+
+#right-bar {
+	text-align: right;
+
+	h2 {
+		font-size: 20px;
+		line-height: 20px;
+		margin: 0px;
+		padding: 0px;
+	}
+
+	@media (max-width: @widthForSmartphone) {
+		text-align: center;
+	}
+	p {
+		font-weight: bolder;
+		font-size: xx-large;
+
+		@media (max-width: @widthForSmartphone) {
+			font-size: 45px;
+		}
+	}
+
+	#balance-space-mobile {
+		display: none;
+
+		@media (max-width: @widthForSmartphone) {
+			display: inherit;
+		}
+
+		@media (max-width: @widthForTablet) {
+			display: inherit;
+		}
+
+	}
+}
+
+#main-footer {
+	background-color: @mainColor;
+	color: @mainColorTwo;
+	position: fixed;
+	z-index: 995;
+	width: 100%;
+	bottom: 0;
+}

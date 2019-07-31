@@ -1,0 +1,31 @@
+<!-- Include Panels -->
+<div id="box-panels"></div>
+
+<div class="row">
+
+	<div class="col-lg-1 col-md-2 col-1">
+		<img src="view/templates/v1.0/images/icons/menu.png" id="button-main-menu" onclick="openMenu()">
+	</div>
+
+	<div class="col-lg-10 col-md-10 col-9 text-center" id="title-space">
+		<img src="view/global/images/logo.png" id="logo">
+		<span>Finance Control</span>
+	</div>
+
+	<!--div class="col-lg-4" id="balance-space">
+		Saldo atual:<br>
+		<span id="insert-cash-receipt">R$ 0,00</span>
+	</div>
+
+	<div class="col-lg-1 col-md-1 col-1 text-right">
+		<img src="view/templates/v1.0/images/icons/add-icon.png" id="button-add-menu" data-toggle="modal" data-target="#management-menu-modal">
+	</div-->
+
+	<div class="col-lg-1 col-md-1 col-2 text-right" id="protect" onclick="Logoff()">
+		<img src="view/templates/v1.0/images/icons/lock.png" id="protect-my-system" onclick="">
+	</div>
+
+</div>
+<script>
+	$("#box-panels").load("view/templates/v1.0/parts/management-menu.html");
+</script>

@@ -1,0 +1,197 @@
+<div class="container-fluid">
+
+	<div class="row">
+		
+		<div class="col-lg-1 col-1"><img src="view/templates/v1.0/images/icons/return.svg" id="return-to-menu" onclick="showManegementPanel('back-to-home')"></div>
+		<div class="col-lg-11 col-11"><h1>Sincronição:</h1></div>
+
+	</div>
+
+	<div class="row" id="space-sync">
+		<div class="col-lg-12 col" id="fields">
+
+			<h2>ATENÇÃO!</h2>
+
+			<p>Este serviço utiliza o envio e recebimento de dados sendo necessário o uso internet. A recomendação é que você execute a sincronização quando estiver usando Wi-fi, pois isso economiza os seus pacotes de dados ou sua franquia.</p>
+			<p>A sincronização só será iniciada quando você clicar no botão abaixo.</p>
+		
+			<form action="sync/sync.php" method="post">
+				<input type="hidden" name="id_user" id="field-id_user-sync" value="">
+				<input type="hidden" name="pass_user" id="field-pass_user-sync" value="">
+				<textarea name="history_sync_recorders" id="history_sync_recorders"></textarea>
+				<textarea name="received_recorders" id="received_recorders"></textarea>
+				<textarea name="cash_outflow_recorders" id="cash_outflow_recorders"></textarea>
+				<button class="btn btn-default" id="btn-sync">Sincronizar</button>
+			</form>
+
+		</div>
+	</div>
+
+	<div class="row" id="create-id">
+		<form action="sync/register-id.php" method="post" target="_top">			
+			<div class="col-lg-12 col" id="fields">
+
+				<div class="container-fluid">
+
+					<div class="row">
+						
+						<div class="col-lg-12 col text-center">
+							<h2>Criando ID de Sincronização:</h2>
+						</div>
+
+					</div>
+				
+					<div class="row">
+					
+						<div class="col-lg-6 col-6">
+							<input type="email" name="field-email" id="field-email" placeholder="Digite seu e-mail" class="form-control">
+						</div>
+						<div class="col-lg-6 col-6">
+							<input type="email" name="field-conf-email" id="field-conf-email" placeholder="Confirme seu e-mail" class="form-control">
+						</div>
+
+					</div>	
+
+					<div class="row">
+				
+						<div class="col-lg-6 col-6">
+							<input type="password" name="field-password-sync" id="field-password-sync" placeholder="Crie uma senha de sincronização..." class="form-control">
+						</div>
+						<div class="col-lg-6 col-6">
+							<input type="password" name="field-conf-password-sync" id="field-conf-password-sync" placeholder="Confirme a senha de sincronização..." class="form-control">
+						</div>
+
+					</div>	
+
+					<div class="row">
+					
+						<div class="col-lg-12 col text-center">
+							<span id="i-already-have-my-id" onclick="ShowFormLoginID()">Eu já sou registrado</span>
+						</div>
+
+					</div>
+
+					<div class="row">
+
+						<div class="col-lg-12 col text-center">
+						
+							<button class="btn btn-default col col-lg-4 col" id="btn-register-id">Registrar</button>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+		</form>
+	</div>
+
+	<div class="row" id="recover-pass">
+		<form action="sync/recover-pass.php" method="post">	
+			<div class="col-lg-12 col" id="fields">
+
+				<div class="container-fluid">
+
+					<div class="row">
+						
+						<div class="col-lg-12 col text-center">
+							<h2>Recuperação de senha:</h2>
+						</div>
+
+					</div>
+				
+					<div class="row">
+					
+						<div class="col-lg-6 col-6">
+							<input type="email" name="field-email-recovery" id="field-email-recovery" placeholder="Digite seu e-mail" class="form-control">
+						</div>
+						<div class="col-lg-6 col-6">
+							<input type="text" name="field-code-recovery" id="field-code-recovery" placeholder="Digite o código de recuperação" class="form-control">
+						</div>
+
+					</div>
+
+					<div class="row">
+					
+						<div class="col-lg-12 col text-center">
+							<span id="i-already-have-my-id" onclick="ShowFormLoginID()">Eu lembrei a senha</span>
+						</div>
+
+					</div>
+
+					<div class="row">
+
+						<div class="col-lg-12 col text-center">
+						
+							<button class="btn btn-default col-lg-4 col"  id="btn-recover-pass">Prosseguir</button>
+
+						</div>
+
+					</div>	
+
+				</div>
+
+			</div>
+		</form>
+	</div>
+
+	<div class="row" id="login-id">
+		<form action="sync/login.php" method="post">	
+			<div class="col-lg-12 col" id="fields">
+
+				<div class="container-fluid">
+
+					<div class="row">
+						
+						<div class="col-lg-12 col text-center">
+							<h2>Login com ID de Sincronização:</h2>
+						</div>
+
+					</div>
+				
+					<div class="row">
+					
+						<div class="col-lg-6 col-6">
+							<input type="email" name="field-email-login" id="field-email-login" placeholder="Digite seu e-mail" class="form-control">
+						</div>
+						<div class="col-lg-6 col-6">
+							<input type="password" name="field-password-sync-login" id="field-conf-email-login" placeholder="Digite senha de sincronização" class="form-control">
+						</div>
+
+					</div>
+
+					<div class="row">
+					
+						<div class="col-lg-12 col text-center">
+							<span id="i-wish-register-me" onclick="ShowFormRegisterID()">Desejo me registrar</span> | <span id="i-wish-recover-pass" onclick="ShowFormRecoveryID()">Recuperação de senha</span>
+						</div>
+
+					</div>
+
+					<div class="row">
+
+						<div class="col-lg-12 col text-center">
+						
+							<button class="btn btn-default col-lg-4 col"  id="btn-login-sync">Logar</button>
+
+						</div>
+
+					</div>	
+
+				</div>
+
+			</div>
+		</form>
+	</div>
+
+
+	<script>
+				
+		$('#history_sync_recorders').css('display','none');
+		$('#received_recorders').css('display','none');
+		$('#cash_outflow_recorders').css('display','none');
+
+	</script>
+
+</div>

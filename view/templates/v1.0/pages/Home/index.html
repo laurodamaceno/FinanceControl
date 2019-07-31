@@ -1,0 +1,108 @@
+<div class="container-fluid" id="login"></div>
+<nav class="container-fluid" id="menu-left"></nav>
+<header class="container-fluid" id="main-header"></header>
+
+<div class="container-fluid" id="tips-slides">
+	<div class="row" id="slides">
+		<div class="col text-center">
+			<table>
+				<tr>
+					<td valign="middle">
+						<h2>Saldo atual:</h2>
+						<p><span id="insert-cash-receipt-mobile"></span></p>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="col text-center">
+			<table>
+				<tr>
+					<td valign="middle">
+						<h2>Total à pagar:</h2>
+						<p><span id="total-for-pay"></span></p>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="col text-center">
+			<table>
+				<tr>
+					<td valign="middle">
+						<h2>Previsão de Saldo final:</h2>
+						<p><span id="final-balance-forecast"></span></p>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid" id="info-content">
+	<div class="row">
+
+		<div class="col-lg-12 col-12">
+
+			<button id="my-debts" onClick="showOnHome('debts')">Minhas dívidas</button>
+			<button id="my-entrances" onClick="showOnHome('entrances')">Meus vencimentos</button>
+
+			<div id="debts">
+				
+				<h2>Suas próximas dívidas estão aqui:</h2>
+
+				<div id="table-debts">
+
+				</div>
+
+			</div>
+
+			<div id="entrances">
+				
+				<h2>Seus vencimentos estão aqui:</h2>
+
+				<div id="table-entrances">
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<!--div class="col-lg-4 col-12" id="right-bar">
+
+			<div id="balance-space-mobile">
+				<h2>Saldo atual:</h2>
+				<p id="insert-cash-receipt-mobile"></p>
+			</div>
+		
+			<h2>Total à pagar:</h2>
+			<p><span id="total-for-pay"></span></p>
+
+			<h2>Previsão de Saldo final:</h2>
+			<p><span id="final-balance-forecast"></span></p>
+
+			<h2>Mensagem:</h2>
+			<p></p>
+
+		</div-->
+
+	</div>
+</div>
+
+<footer class="container-fluid" id="main-footer"></footer>
+
+<script>
+	loadParts("menu");
+	loadParts("header");
+	loadParts("footer");
+	$("#login").load("view/templates/v1.0/parts/LockSystem/login.html");
+
+	$('#slides').slick({
+		autoplay: true,
+		infinite: true,
+		//dots: true,
+		speed: 500,
+		slidesToShow: 1,
+		adaptiveHeight: true 
+	});
+
+</script>

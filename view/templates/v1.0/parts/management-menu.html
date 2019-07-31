@@ -1,0 +1,424 @@
+<!-- Modal main manu-->
+<div class="modal fade" id="management-menu-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Menu rápido:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+      	<div id="management-menu">
+
+			<div class="box-management" id="option-menu">
+
+				<div class="container-fluid text-center">
+				
+					<div class="row">
+					
+						<div class="col-lg-6 col-6" onclick="showManegementPanel('management-salary-income')">
+						
+							<img src="view/templates/v1.0/images/icons/management-salary-income.png">
+
+							<br>
+							<br>
+							Gerenciar<br>
+							Salário / Renda
+
+						</div>
+
+						<div class="col-lg-6 col-6" onclick="showManegementPanel('management-benefits')">
+						
+							<img src="view/templates/v1.0/images/icons/management-benefits.png">
+
+							<br>
+							<br>
+							Gerenciar<br>
+							Benefícios
+
+						</div>
+
+					</div>
+
+					<div class="row">
+					
+						<div class="col-lg-6 col-6" onclick="showManegementPanel('new-cash-entrance')">
+						
+							<img src="view/templates/v1.0/images/icons/new-cash-entrance.png">
+
+							<br>
+							<br>
+							Nova entrada<br>
+							de dinheiro
+
+						</div>
+
+						<div class="col-lg-6 col-6" onclick="showManegementPanel('new-debt-for-pay')">
+						
+							<img src="view/templates/v1.0/images/icons/new-debt-for-pay.png">
+
+							<br>
+							<br>
+							Nova conta<br>
+							à pagar
+
+						</div>
+
+					</div>
+
+				</div>
+				
+			</div>			
+
+		</div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Management Salary Income -->
+<div class="modal fade" id="management-salary-income-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Gerenciamento de Salário</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="box-management" id="management-salary-income"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="include-salary">Salvar</button>
+        <button type="button" class="btn btn-primary" id="edit-salary">Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Benefits -->
+<div class="modal fade" id="management-benefits-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Gerenciamento de Benefício</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="box-management" id="management-benefits"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="include-benefit">Salvar</button>
+        <button type="button" class="btn btn-primary" id="edit-benefit">Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal New Cash Entrance -->
+<div class="modal fade" id="new-cash-entrance-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Nova entrada de dinheiro:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="box-management" id="new-cash-entrance"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="include-cash-receipt">Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Edit Cash Entrance -->
+<div class="modal fade" id="edit-cash-entrance-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Editando Entrada de Dinheiro:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="box-management" id="edit-cash-entrance"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="bt-edit-cash-receipt">Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Edit Debt for Pay -->
+<div class="modal fade" id="edit-debt-for-pay-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Editando saída de dinheiro:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="box-management" id="edit-debt-for-pay"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="edit-cash-out">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal New Debt for Pay -->
+<div class="modal fade" id="new-debt-for-pay-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Nova dívida:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="box-management" id="new-debt-for-pay"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="include-cash-out">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Search Debt -->
+<div class="modal fade" id="search-debt-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Procura de débito:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="box-management" id="search-debt"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="search-cash-out">Pesquisar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Create Password -->
+<div class="modal fade" id="create-password-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Criação de Senha de Proteção:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="box-management" id="create-password"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="bt-create-password">Criar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Edit Password -->
+<div class="modal fade" id="edit-password-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Editando Senha de Proteção:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="box-management" id="edit-password"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="bt-edit-password">Editar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Management Protection -->
+<div class="modal fade" id="management-protection-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Gerenciar a Proteção:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="box-management" id="management-protection"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="modify-protection">Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Tips -->
+<div class="modal fade" id="tips-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Dicas:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="box-management" id="tips"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Tutorials -->
+<div class="modal fade" id="tutorials-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Tutoriais:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="box-management" id="tutorials"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Releases -->
+<div class="modal fade" id="releases-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Notas de Lançamento:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="box-management" id="releases"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Privacity -->
+<div class="modal fade" id="privacy-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Privacidade:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="box-management" id="privacy"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal About this Apk -->
+<div class="modal fade" id="about-this-apk-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Sobre este Aplicativo:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="box-management" id="about-this-apk"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Sync -->
+<div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalScrollableTitle">Sync:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="box-management" id="sync"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--div class="box-management" id="login"></div-->
+<script>
+	$("#management-salary-income").load("view/templates/v1.0/parts/CashEntrance/management-salary-income.html");
+	$("#management-benefits").load("view/templates/v1.0/parts/CashEntrance/management-benefits.html");
+	$("#new-cash-entrance").load("view/templates/v1.0/parts/CashEntrance/new-cash-entrance.html");
+	$("#edit-cash-entrance").load("view/templates/v1.0/parts/CashEntrance/edit-cash-entrance.html");
+	$("#new-debt-for-pay").load("view/templates/v1.0/parts/CashOut/new-debt-for-pay.html");
+	$("#edit-debt-for-pay").load("view/templates/v1.0/parts/CashOut/edit-debt-for-pay.html");
+	$("#search-debt").load("view/templates/v1.0/parts/CashOut/search-debt.html");
+	$("#create-password").load("view/templates/v1.0/parts/LockSystem/create-password.html");
+	$("#edit-password").load("view/templates/v1.0/parts/LockSystem/edit-password.html");
+	$("#management-protection").load("view/templates/v1.0/parts/LockSystem/management-protection.html");
+	//$("#login").load("view/templates/v1.0/parts/LockSystem/login.html");
+	$("#tips").load("view/templates/v1.0/parts/tips.html");
+	$("#tutorials").load("view/templates/v1.0/parts/tutorials.html");
+	$("#releases").load("view/templates/v1.0/parts/releases.html");
+	$("#privacy").load("view/templates/v1.0/parts/privacy.html");
+	$("#about-this-apk").load("view/templates/v1.0/parts/about-this-apk.html");
+	$("#sync").load("view/templates/v1.0/parts/sync.html");
+</script>

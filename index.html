@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+
+  	<!-- Bar color of the Chrome in the Android S.O. >=5.0 -->
+  	<meta name="theme-color" content="#380518">
+  	<!-- 
+
+  		Including meta tags to prevent this from appearing in Google searches because this is just a test 
+
+  	-->
+  	<meta name="robots" content="noindex">
+  	<meta name="googlebot" content="noindex">
+
+  	<!--
+
+  	App: 		Finance Control
+  	Version: 	v1.0
+  	Author:		Lauro Damaceno
+  	URL:		undefined
+
+  	-->
+    <!-- Required meta tags -->
+    <link rel="shortcut icon" href="view/global/images/icon.png" />
+    <meta charset="utf-8">
+    <meta name="description" content="Tenha o controle do seu dinheiro na palma da sua mão com o Finance Controle">
+  	<meta name="keywords" content="Finance Controle, Controle Financeiro">
+  	<meta name="author" content="Lauro Damaceno">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Finance Control v1.0</title>
+
+    <!-- Includin JQuery Mobile CSS -->
+    <!--link rel="stylesheet" href="view/global/jquery.mobile/1.4.5/jquery.mobile-1.4.5.min.css" /-->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="view/global/bootstrap/4.3.1/vendor/twbs/bootstrap/dist/css/bootstrap.min.css">
+
+    <!-- Including main css -->
+    <link rel="stylesheet" type="text/css" href="view/templates/v1.0/styles/main-style.min.css" defer>
+
+    <!-- Including Slick Slider css -->
+    <link rel="stylesheet" type="text/css" href="view/global/slick/1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="view/global/slick/1.8.1/slick/slick-theme.css"/>
+
+  </head>
+  <body onLoad="formatRSCoin()">
+
+  	<section  id="all" class="content">
+
+  		<div id="cover-block"></div>
+
+	  	<input type="hidden" id="field-actual-date" value="">
+	  	<input type="hidden" id="field-salary-top" value="">
+
+	  	<!-- Main content -->
+	    <div id="main-content">
+			
+	    </div>
+
+    </section>
+
+    <table id="table-loading" border="0" cellspacing="0" cellpadding="0">
+  		<tr>
+  			<td align="center"><img src="view/global/images/loader.gif" alt="" id="loading" class="content"/></td>
+  		</tr>
+  	</table>
+
+    <!-- Including JQuery Mobile JS -->
+    <script src="view/global/jquery-1.11.1.min.js"></script>
+    <script src="view/global/jquery.mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <!-- Optional JavaScript -->
+    <script src="view/global/jquery/dist/jquery.min.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- script src="view/global/jquery/dist/jquery-3.3.1.slim.min.js"></script >
+    <script src="view/global/jquery/dist/jquery.slim.min.js"></script-->
+    <script src="view/global/popper.js/dist/umd/popper.min.js"></script>
+    <script src="view/global/bootstrap/4.3.1/vendor/twbs/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Including CriptoJS -->
+    <script src="libraries/cripto-js/core.js"></script>
+    <script src="libraries/cripto-js/sha256.js"></script>
+
+    <!-- Including Slick Slider JS -->
+    <script src="view/global/slick/1.8.1/slick/slick.min.js"></script>
+
+  	<!-- Including my JS Scripts -->
+    <script src="view/templates/v1.0/scripts/my-script.min.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<div class="container-fluid">
+
+	<div id="fields">
+
+	<div class="row">
+		<div class="col-lg-12 col">
+			<select name="field-title-benefit" id="field-title-benefit" class="form-control" onchange="ShowBenefit(0)">
+				<option value="">Selecione o benefício</option>
+				<option value="VA" id="VA">VA - Vale alimentação</option>
+				<option value="VR" id="VR">VR - Vale refeição</option>
+				<option value="VT" id="VT">VT - Vale transporte</option>							
+			</select>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12 col">
+			<textarea class="form-control" name="field-description-benefit" id="field-description-benefit" rows="2" placeholder="Se julgar nescessário digite uma descrição..."></textarea>
+		</div>
+	</div>
+	
+	<div class="row" id="fields">
+		<div class="col-lg-1 col-1">R$ </div>
+		<div class="col-lg-11 col-11"><input type="number" name="field-value-benefit" class="form-control" id="field-value-benefit" placeholder="Digite o valor do benefício aqui..." min="0" step="0.01" data-number-to-fixed="2" data-number-stepfactor="100"></div>
+	</div>
+
+	</div>
+
+</div>
